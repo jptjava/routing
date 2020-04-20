@@ -1,0 +1,27 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<table>
+<tr *ngFor="let fruit of fruits">
+    <td>{{fruit}}</td>
+</tr>
+
+
+<div *ngIf="2>5">visibility based on if condition</div>
+
+<div *ngIf="show">i am visible</div>
+
+<table>
+
+
+<button (click)="clickMe()">Click me!</button>
+
+<app-inouttest name="test"></app-inouttest>
+<app-inouttest #child1 [name]="name" (sendColorInfo)="changeData($event)"></app-inouttest>
+
+this data is in parent {{color}}
+<p>
+getting child value using template referencing {{child1.content}}
+</p>
